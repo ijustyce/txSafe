@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">安全助手</string>
+    <string name="action_settings">settings</string>
+
+    <!-- txApplication -->
+    <string name="copy_success">复制成功</string>
+
+    <!-- baseclass -->
+    <string name="sign_fail">不是原版软件，建议您卸载。</string>
+
+    <!-- activity_main -->
+
+    <string name="hello_world">更简洁，更独特</string>
+    <string name="applocker">程序锁</string>
+    <string name="health">点滴健康</string>
+    <string name="intercept">骚扰拦截</string>
+    <string name="scan">健康自检</string>
+    <string name="privacy">隐私保护</string>
+    <string name="feedback">用户反馈</string>
+    <string name="tools">工具箱</string>
+    <string name="help">使用帮助</string>
+
+    <!-- feedback -->
+    <string name="contact">联系方式</string>
+    <string name="msg">反馈内容</string>
+    <string name="submit">提交</string>
+    <string name="dialog_title">请稍候 &#8230;</string>
+    <string name="dialog_content">正在提交 &#8230;</string>
+    <string name="error_feedback">输入不能为空</string>
+
+    <!-- help -->
+    <string name="help_show">1.这款软件完全免费，您可以从github下载到所有源码，
+        但请不要自行修改添加广告后发布于任何应用商店。源码仅供个人学习之用。\n\n 
+        2.我的博客 : http://blog.ijustyce.com\n\n
+         3.源码下载:\n https://github.com/ijustyce/txSafe.git\n\n
+         4.更多信息请访问我的博客或者: \nbbs.ijustyce.com</string>
+
+    <!-- settings -->
+    <string name="summary">请选择</string>
+    <string name="anim">过渡动画</string>
+    <string name="theme">主题选择</string>
+    <string name="lock">程序锁</string>
+
+    <!-- locker -->
+    <string name="lockApp">锁定应用</string>
+    <string name="lock_error">请先选择要锁定的应用</string>
+
+    <!-- health -->
+    <string name="hello_health">健康生活每一天</string>
+    <string name="health_today">今日健康</string>
+    <string name="health_previous">昨日健康</string>
+    <string name="health_week">本周概况</string>
+    <string name="health_month">本月概况</string>
+    <string name="health_family">家长控制</string>
+    <string name="health_plan">我的计划</string>
+    <string name="health_help">使用帮助</string>
+    <string name="health_feedback">用户反馈</string>
+
+    <!-- password -->
+    <string name="hint">请输入您的密码：</string>
+    <string name="ok">确定</string>
+    <string name="del">回退</string>
+    <string name="pw_success">欢迎使用</string>
+    <string name="pw_error">解锁出错</string>
+    <string name="pw_wait">超过三次错误，程序即将退出</string>
+    <string name="pw_set">请先设置您的密码</string>
+    <string name="pass_hint">手势无法找回，请牢记</string>
+    <string name="pass_info">请绘制手势以解锁</string>
+    <string name="pass_first">请绘制您的手势</string>
+    <string name="pass_affirm">请确认您的手势</string>
+    <string name="pass_affirm_error">两次手势不一致，请重新绘制</string>
+    <string name="pass_short">密码太短，请重新输入</string>
+
+</resources>

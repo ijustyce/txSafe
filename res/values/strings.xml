@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">safe</string>
+    <string name="action_settings">settings</string>
+
+    <!-- txApplication -->
+    <string name="copy_success">copy success</string>
+
+    <!-- baseclass -->
+    <string name="sign_fail">Not the original software,uninstall is needed.</string>
+
+    <!-- activity_main -->
+
+    <string name="hello_world">More concise, more unique</string>
+    <string name="applocker">App Locker</string>
+    <string name="health">Little\nHealth</string>
+    <string name="intercept">Intercept</string>
+    <string name="scan">Scan</string>
+    <string name="privacy">Privacy</string>
+    <string name="feedback">Feedback</string>
+    <string name="tools">Tools</string>
+    <string name="help">help</string>
+
+    <!-- feedback -->
+    <string name="contact">contact</string>
+    <string name="msg">content</string>
+    <string name="submit">submit</string>
+    <string name="dialog_title">please wait &#8230;</string>
+    <string name="dialog_content">submit in process &#8230;</string>
+    <string name="error_feedback">input can not be empty</string>
+
+    <!-- help -->
+    <string name="help_show">1.This app is totally for free you can download 
+        all sources from github , but please not add ads then publish on other
+         app store\n\n 2.My blog : http://blog.ijustyce.com\n\n
+         3.Downlod sources from\nhttps://github.com/ijustyce/txSafe.git\n\n
+         4.For more information please visit my blog or\nbbs.ijustyce.com</string>
+
+    <!-- settings -->
+    <string name="summary">select*</string>
+    <string name="anim">windows animation</string>
+    <string name="theme">app theme</string>
+    <string name="lock">Application locker</string>
+
+    <!-- locker -->
+    <string name="lockApp">lockApp</string>
+    <string name="lock_error">please choose app first</string>
+
+    <!-- health -->
+    <string name="hello_health">Care health every day</string>
+    <string name="health_today">Today</string>
+    <string name="health_previous">Yesterday</string>
+    <string name="health_week">This week</string>
+    <string name="health_month">This month</string>
+    <string name="health_family">Control</string>
+    <string name="health_plan">Plan</string>
+    <string name="health_help">Help</string>
+    <string name="health_feedback">Feedback</string>
+
+    <!-- password -->
+    <string name="hint">please input your password</string>
+    <string name="ok">OK</string>
+    <string name="del">delete</string>
+    <string name="pw_success">success</string>
+    <string name="pw_error">error</string>
+    <string name="pw_wait">Error than 3 times , exit application</string>
+    <string name="pw_set">please set your password</string>
+    <string name="pass_hint">plase remember your gesture</string>
+    <string name="pass_info">please unlock</string>
+    <string name="pass_first">draw your gesture</string>
+    <string name="pass_affirm">affirm your gesture</string>
+    <string name="pass_affirm_error">inconformity</string>
+    <string name="pass_short">password to short</string>
+
+    <!-- 以下是自定义的颜色 -->
+
+    <drawable name="bkcolor">#33CCFF</drawable>
+    <drawable name="newmessage">#FFF</drawable>
+
+</resources>
