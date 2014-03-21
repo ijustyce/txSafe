@@ -122,7 +122,7 @@ public class MainActivity extends baseclass {
 
 	private void about() {
 
-	//	startActivity(new Intent(this, Tools.class));
+		startActivity(new Intent(this, com.ijustyce.sms.about.class));
 		anim();
 		this.finish();
 	}
