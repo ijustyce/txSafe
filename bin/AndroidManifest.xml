@@ -26,10 +26,10 @@
     <application
         android:name=".txApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/txTheme3" >
         <activity
+            android:icon="@drawable/ic_launcher"
             android:name="com.ijustyce.safe.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -45,8 +45,79 @@
         <activity android:name=".Locker" />
         <activity android:name=".Password" />
         <activity android:name=".health" />
+
         <service android:name=".txServices" />
+
+        <!-- 短信部分 -->
+        <activity
+            android:name="com.ijustyce.sms.MainActivity"
+            android:icon="@drawable/sms_ic_launcher"
+            android:label="@string/sms_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.ijustyce.sms.about" />
+        <activity
+            android:name="com.ijustyce.sms.show"
+            android:label="@string/newmessage"
+            android:theme="@style/dialogTheme" >
+        </activity>
+
+        <service android:name="com.ijustyce.sms.MessageActivity" />
+        <service android:name="com.ijustyce.sms.dealmsg" />
+
+        <activity
+            android:name="com.ijustyce.sms.read"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ijustyce.sms.settings" />
+        <activity android:name="com.ijustyce.sms.intercept" />
+        <activity android:name="com.ijustyce.sms.conversation" />
+        <activity android:name="com.ijustyce.sms.timingList" />
+        <activity android:name="com.ijustyce.sms.advance" />
+        <activity android:name="com.ijustyce.sms.backup" />
+        <activity android:name="com.ijustyce.sms.feedback" />
+        <activity
+            android:name="com.ijustyce.sms.sendsms"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android-dir/mms-sms" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.ijustyce.sms.SmsActivity"
+            android:enabled="true" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.ijustyce.sms.Timing"
+            android:enabled="true" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.tx.sms.timing" />
+            </intent-filter>
+        </receiver>
+        <!-- 短信部分结束 -->
+
     </application>
 
 </manifest>

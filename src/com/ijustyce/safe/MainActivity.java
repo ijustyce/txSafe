@@ -1,5 +1,6 @@
 package com.ijustyce.safe;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,6 +10,8 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
+import com.txh.Api.sqlite;
+
 public class MainActivity extends baseclass {
 
 	@Override
@@ -16,7 +19,40 @@ public class MainActivity extends baseclass {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		firstUse();
 		init();
+	}
+	
+	private boolean firstUse(){
+		
+		File dbFile = new File(Constants.dbFile);
+		if(!dbFile.exists()){
+			createTable();
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * create table for app
+	 */
+	
+	private void createTable(){
+		
+		sqlite api = new sqlite();
+		String dbFile = Constants.dbFile;	
+		String[] intercept = {"value"};
+		String[] sms = {"phone" , "content" , "ismy"};
+		String[] recent = {"phone"};
+		String[] timing = {"phone" , "content" , "year" ,"month" , 
+				"day" ,"hour" , "minute"};
+		
+		api.createTable("intercept", intercept , dbFile);		
+		api.createTable("words", intercept , dbFile);	
+		api.createTable("sms", sms , dbFile);
+		api.createTable("phone", sms , dbFile);
+		api.createTable("recent", recent , dbFile);	
+		api.createTable("timing", timing, dbFile);
 	}
 
 	private void init() {
@@ -106,7 +142,7 @@ public class MainActivity extends baseclass {
 			break;
 
 		case R.id.safeMessage:
-			health();
+			sms();
 			break;
 
 		case R.id.safeContacts:
@@ -136,9 +172,9 @@ public class MainActivity extends baseclass {
 		
 	}
 
-	private void health() {
+	private void sms() {
 
-		startActivity(new Intent(this, health.class));
+		startActivity(new Intent(this, com.ijustyce.sms.MainActivity.class));
 		anim();
 		this.finish();
 	}
@@ -160,7 +196,9 @@ public class MainActivity extends baseclass {
 	}
 
 	public void exit() {
-
+		
+		this.finish();
+		System.gc();
 		System.exit(0);
 	}
 }

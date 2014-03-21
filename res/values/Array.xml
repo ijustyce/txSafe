@@ -42,4 +42,13 @@
 <item>gesture</item>
 </string-array>
 
+<string-array name="Timing">
+<item>send</item>
+<item>delete</item>
+</string-array>
+<string-array name="TimingValue">
+<item>send</item>
+<item>delete</item>
+</string-array>
+
 </resources> 

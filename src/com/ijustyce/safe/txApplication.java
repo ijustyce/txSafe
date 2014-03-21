@@ -18,18 +18,16 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.txh.Api.sqlite;
-
 public class txApplication extends Application {
 
 	private static String tag = "txTag";
-	private String dbFile; 
 	public String sharedName = "shared";
-	public boolean pw = false;	
+	public boolean pw = false;
+	public String head = "";
 	@Override
 	public void onCreate() {
 		
-		firstUse();
+		getDbFile();
 		Log.i(tag, "Application onCreate , pid = " + Process.myPid());
 	}
 	
@@ -109,39 +107,18 @@ public class txApplication extends Application {
 	}
 	
 	/**
-	 * check if is first time , return true if is first time
-	 * @return
-	 */
-	public boolean firstUse(){
-		
-		File dbFile = new File(getDbFile());
-		if(!dbFile.exists()){
-			createTable();
-			Log.i(tag, "this is first time to use");
-			return true;
-		}
-		
-		Log.i(tag, "this is not the first time to use");
-		return false;
-	}
-	
-	/**
 	 * return sqlite file path ,if parent directory not exist
 	 * it will create !
 	 * @return
 	 */
-	public String getDbFile(){
+	public void getDbFile(){
 	
 		String file = this.getFilesDir().getPath();
 		File f = new File(file);
 		if(!f.exists()){
 			f.mkdir();
 		}
-		dbFile = file + "/contacts.db";
-		Log.i(tag, dbFile);
-		return dbFile;
 	}
-	
 	
 	/**
 	 * return windows animation string
@@ -309,28 +286,5 @@ public class txApplication extends Application {
 				(Context.CLIPBOARD_SERVICE);
 		
 		return clipboard.getText().toString();
-	}
-	
-	/**
-	 * create table for app
-	 */
-	
-	private void createTable(){
-		
-		sqlite api = new sqlite();
-		String dbFile = getDbFile();	
-		String[] intercept = {"value"};
-		String[] sms = {"phone" , "content" , "ismy"};
-		String[] recent = {"phone"};
-		String[] timing = {"phone" , "content" , "year" ,"month" , 
-				"day" ,"hour" , "minute"};
-		
-		api.createTable("intercept", intercept , dbFile);		
-		api.createTable("words", intercept , dbFile);	
-		api.createTable("sms", sms , dbFile);
-		api.createTable("phone", sms , dbFile);
-		api.createTable("recent", recent , dbFile);	
-		api.createTable("timing", timing, dbFile);
-		
 	}
 }

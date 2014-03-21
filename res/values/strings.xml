@@ -74,6 +74,8 @@
     <string name="pass_short">password to short</string>
     
     <!-- 天蝎短信部分 -->
+     <string name="sms_name">tx-sms</string>
+     <string name="send_show">send Successfully</string>
     <string name="send_error">input error</string>
     <string name="with">message with </string>
     <string name="main_show">click to reply</string>

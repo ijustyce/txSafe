@@ -25,6 +25,8 @@ public final class R {
         public static final int zoomout=0x7f04000d;
     }
     public static final class array {
+        public static final int Timing=0x7f060006;
+        public static final int TimingValue=0x7f060007;
         public static final int anim=0x7f060000;
         public static final int animValue=0x7f060001;
         public static final int lock=0x7f060004;
@@ -55,17 +57,21 @@ public final class R {
         /**  天蝎短信部分结束 
  以下是自定义的颜色 
          */
-        public static final int bkcolor=0x7f020008;
+        public static final int bkcolor=0x7f020009;
         public static final int exit=0x7f020003;
         public static final int ic_launcher=0x7f020004;
-        public static final int newmessage=0x7f020009;
+        public static final int newmessage=0x7f02000a;
         public static final int read=0x7f020005;
         public static final int setting=0x7f020006;
-        public static final int txh=0x7f020007;
+        public static final int sms_ic_launcher=0x7f020007;
+        public static final int txh=0x7f020008;
     }
     public static final class id {
+        public static final int BackupBt=0x7f0c002f;
+        public static final int RestoreBt=0x7f0c0030;
+        public static final int Timing=0x7f0c0041;
         public static final int about=0x7f0c0009;
-        public static final int action_settings=0x7f0c002d;
+        public static final int action_settings=0x7f0c0046;
         public static final int appList=0x7f0c002c;
         public static final int bottom_info_layout=0x7f0c0028;
         public static final int bt1=0x7f0c000f;
@@ -79,19 +85,30 @@ public final class R {
         public static final int bt8=0x7f0c0016;
         public static final int bt9=0x7f0c0017;
         public static final int btn_lock_nopin=0x7f0c0029;
+        public static final int checkSignBt=0x7f0c0031;
         public static final int contact=0x7f0c000c;
+        public static final int content=0x7f0c003c;
         public static final int del=0x7f0c001c;
         public static final int exit=0x7f0c000a;
         public static final int feedBack=0x7f0c0008;
+        public static final int finish=0x7f0c003e;
         public static final int help=0x7f0c0007;
+        public static final int intercept=0x7f0c0045;
         public static final int interceptList=0x7f0c0004;
         public static final int interceptSetting=0x7f0c0006;
+        public static final int layout=0x7f0c0032;
+        public static final int left=0x7f0c003d;
+        public static final int left_1=0x7f0c0040;
         public static final int lockBt=0x7f0c002b;
         public static final int lock_paint=0x7f0c002a;
         public static final int lock_paint_layout=0x7f0c0027;
         public static final int lock_title_user_photo=0x7f0c0025;
         public static final int lock_user_info=0x7f0c0026;
+        public static final int message=0x7f0c0044;
         public static final int msg=0x7f0c000d;
+        public static final int name=0x7f0c003a;
+        public static final int newmessage=0x7f0c0035;
+        public static final int newnote=0x7f0c0043;
         public static final int num0=0x7f0c0024;
         public static final int num1=0x7f0c0019;
         public static final int num2=0x7f0c001a;
@@ -104,11 +121,22 @@ public final class R {
         public static final int num9=0x7f0c0023;
         public static final int ok=0x7f0c0020;
         public static final int pw=0x7f0c0018;
+        public static final int quickclose=0x7f0c0037;
+        public static final int quickreply=0x7f0c0036;
+        public static final int recent_text=0x7f0c0038;
         public static final int safeContacts=0x7f0c0002;
         public static final int safeMessage=0x7f0c0003;
+        public static final int scrollView=0x7f0c0039;
+        public static final int select=0x7f0c003b;
+        public static final int send=0x7f0c003f;
         public static final int setting=0x7f0c000b;
+        public static final int show=0x7f0c0033;
+        public static final int showcontent=0x7f0c0034;
+        public static final int text=0x7f0c002d;
         public static final int textView=0x7f0c0001;
+        public static final int timingSms=0x7f0c0042;
         public static final int trashList=0x7f0c0005;
+        public static final int value=0x7f0c002e;
         public static final int version=0x7f0c0000;
     }
     public static final class layout {
@@ -121,72 +149,80 @@ public final class R {
         public static final int lock_screen_layout=0x7f030006;
         public static final int locker=0x7f030007;
         public static final int preference=0x7f030008;
+        public static final int sms_advance=0x7f030009;
+        public static final int sms_backup=0x7f03000a;
+        public static final int sms_main=0x7f03000b;
+        public static final int sms_quickshow=0x7f03000c;
+        public static final int sms_send=0x7f03000d;
+        public static final int sms_show=0x7f03000e;
+        public static final int sms_show_intercept=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
     }
     public static final class string {
-        public static final int Conversation=0x7f090052;
-        public static final int Dustbin=0x7f090054;
-        public static final int Inbox=0x7f090053;
-        public static final int SMStimer=0x7f09005b;
-        public static final int Timing_error=0x7f09005d;
+        public static final int Conversation=0x7f090054;
+        public static final int Dustbin=0x7f090056;
+        public static final int Inbox=0x7f090055;
+        public static final int SMStimer=0x7f09005d;
+        public static final int Timing_error=0x7f09005f;
         public static final int about=0x7f09000b;
-        public static final int about_txh=0x7f09004b;
+        public static final int about_txh=0x7f09004d;
         public static final int action_settings=0x7f090001;
-        public static final int add=0x7f09003a;
-        public static final int add_contacts=0x7f09006e;
-        public static final int add_error=0x7f09003f;
-        public static final int add_number=0x7f090063;
-        public static final int add_words=0x7f090064;
+        public static final int add=0x7f09003c;
+        public static final int add_contacts=0x7f090070;
+        public static final int add_error=0x7f090041;
+        public static final int add_number=0x7f090065;
+        public static final int add_words=0x7f090066;
         public static final int anim=0x7f090015;
         public static final int app_name=0x7f090000;
-        public static final int ask=0x7f090056;
-        public static final int ask_content=0x7f090038;
-        public static final int backup=0x7f090065;
-        public static final int call=0x7f09006f;
-        public static final int cancel=0x7f09004d;
-        public static final int checkSign=0x7f090069;
-        public static final int clean=0x7f090039;
-        public static final int clickCleanContent=0x7f090048;
-        public static final int close=0x7f090033;
+        public static final int ask=0x7f090058;
+        public static final int ask_content=0x7f09003a;
+        public static final int backup=0x7f090067;
+        public static final int call=0x7f090071;
+        public static final int cancel=0x7f09004f;
+        public static final int checkSign=0x7f09006b;
+        public static final int clean=0x7f09003b;
+        public static final int clickCleanContent=0x7f09004a;
+        public static final int close=0x7f090035;
         /**  feedback 
  feedback 
          */
         public static final int contact=0x7f09000d;
-        public static final int copy=0x7f090070;
+        public static final int copy=0x7f090072;
         /**  txApplication 
  txApplication 
          */
         public static final int copy_success=0x7f090002;
-        public static final int dealMsg=0x7f09005e;
+        public static final int dealMsg=0x7f090060;
         public static final int del=0x7f090025;
-        public static final int del_all=0x7f09006c;
+        public static final int del_all=0x7f09006e;
         /**  会话列表界面，常按弹出菜单选项 
+ 会话列表界面，常按弹出菜单选项 
          */
-        public static final int delete=0x7f09006b;
-        public static final int desc_Conversation=0x7f090075;
-        public static final int desc_Dustbin=0x7f090079;
-        public static final int desc_SMStimer=0x7f090076;
-        public static final int desc_about=0x7f09007a;
-        public static final int desc_feedback=0x7f090077;
-        public static final int desc_finish=0x7f09007d;
-        public static final int desc_intercept=0x7f090078;
-        public static final int desc_more=0x7f09007b;
+        public static final int delete=0x7f09006d;
+        public static final int desc_Conversation=0x7f090077;
+        public static final int desc_Dustbin=0x7f09007b;
+        public static final int desc_SMStimer=0x7f090078;
+        public static final int desc_about=0x7f09007c;
+        public static final int desc_feedback=0x7f090079;
+        public static final int desc_finish=0x7f09007f;
+        public static final int desc_intercept=0x7f09007a;
+        public static final int desc_more=0x7f09007d;
         /**  以下字符串是为ui测试准备 
          */
-        public static final int desc_newMsg=0x7f090074;
-        public static final int desc_select=0x7f09007c;
-        public static final int desc_send=0x7f09007e;
-        public static final int desc_timingSms=0x7f09007f;
+        public static final int desc_newMsg=0x7f090076;
+        public static final int desc_select=0x7f09007e;
+        public static final int desc_send=0x7f090080;
+        public static final int desc_timingSms=0x7f090081;
         public static final int dialog_content=0x7f090011;
         public static final int dialog_title=0x7f090010;
-        public static final int enter_send=0x7f09004c;
+        public static final int enter_send=0x7f09004e;
         public static final int error_feedback=0x7f090012;
-        public static final int error_timing=0x7f09005f;
-        public static final int exit=0x7f090057;
+        public static final int error_timing=0x7f090061;
+        public static final int exit=0x7f090059;
         public static final int feedback=0x7f09000a;
-        public static final int finish=0x7f090042;
+        public static final int finish=0x7f090044;
         public static final int health_family=0x7f09001f;
         public static final int health_feedback=0x7f090022;
         public static final int health_help=0x7f090021;
@@ -212,30 +248,30 @@ public final class R {
  password 
          */
         public static final int hint=0x7f090023;
-        public static final int intecept_num=0x7f090073;
-        public static final int intercept=0x7f09003b;
+        public static final int intecept_num=0x7f090075;
+        public static final int intercept=0x7f09003d;
         public static final int interceptList=0x7f090007;
         public static final int interceptSetting=0x7f090009;
-        public static final int intercept_phone=0x7f09003d;
-        public static final int intercept_show=0x7f09003c;
-        public static final int intercept_words=0x7f09003e;
-        public static final int key=0x7f090061;
+        public static final int intercept_phone=0x7f09003f;
+        public static final int intercept_show=0x7f09003e;
+        public static final int intercept_words=0x7f090040;
+        public static final int key=0x7f090063;
         public static final int lock=0x7f090017;
         /**  locker 
  locker 
          */
         public static final int lockApp=0x7f090018;
         public static final int lock_error=0x7f090019;
-        public static final int main_show=0x7f090032;
-        public static final int me=0x7f090035;
-        public static final int more=0x7f090055;
+        public static final int main_show=0x7f090034;
+        public static final int me=0x7f090037;
+        public static final int more=0x7f090057;
         public static final int msg=0x7f09000e;
-        public static final int newMsg=0x7f090051;
-        public static final int newmessage=0x7f090036;
-        public static final int no=0x7f090059;
-        public static final int none_sms=0x7f090072;
+        public static final int newMsg=0x7f090053;
+        public static final int newmessage=0x7f090038;
+        public static final int no=0x7f09005b;
+        public static final int none_sms=0x7f090074;
         public static final int ok=0x7f090024;
-        public static final int option=0x7f09006d;
+        public static final int option=0x7f09006f;
         public static final int pass_affirm=0x7f09002d;
         public static final int pass_affirm_error=0x7f09002e;
         public static final int pass_first=0x7f09002c;
@@ -246,47 +282,50 @@ public final class R {
         public static final int pw_set=0x7f090029;
         public static final int pw_success=0x7f090026;
         public static final int pw_wait=0x7f090028;
-        public static final int quickShow=0x7f090050;
-        public static final int quickhint=0x7f090037;
-        public static final int receive_success=0x7f090045;
-        public static final int recent=0x7f09005a;
-        public static final int reply=0x7f090034;
-        public static final int restore=0x7f090067;
+        public static final int quickShow=0x7f090052;
+        public static final int quickhint=0x7f090039;
+        public static final int receive_success=0x7f090047;
+        public static final int recent=0x7f09005c;
+        public static final int reply=0x7f090036;
+        public static final int restore=0x7f090069;
         public static final int safeContacts=0x7f090005;
         public static final int safeMessage=0x7f090006;
-        public static final int select=0x7f090049;
-        public static final int send=0x7f090041;
-        public static final int send_again=0x7f09004f;
-        public static final int send_content=0x7f090047;
-        /**  天蝎短信部分 
-         */
-        public static final int send_error=0x7f090030;
-        public static final int send_fail=0x7f090044;
-        public static final int send_hint=0x7f090040;
-        public static final int send_success=0x7f090043;
-        public static final int send_title=0x7f090046;
-        public static final int show_much=0x7f09006a;
+        public static final int select=0x7f09004b;
+        public static final int send=0x7f090043;
+        public static final int send_again=0x7f090051;
+        public static final int send_content=0x7f090049;
+        public static final int send_error=0x7f090032;
+        public static final int send_fail=0x7f090046;
+        public static final int send_hint=0x7f090042;
+        public static final int send_show=0x7f090031;
+        public static final int send_success=0x7f090045;
+        public static final int send_title=0x7f090048;
+        public static final int show_much=0x7f09006c;
         /**  baseclass 
  baseclass 
          */
         public static final int sign_fail=0x7f090003;
-        public static final int sign_success=0x7f090068;
-        public static final int strangers=0x7f090060;
+        public static final int sign_success=0x7f09006a;
+        /**  天蝎短信部分 
+ 短信部分 
+         */
+        public static final int sms_name=0x7f090030;
+        public static final int strangers=0x7f090062;
         public static final int submit=0x7f09000f;
         /**  settings 
  settings 
          */
         public static final int summary=0x7f090014;
         public static final int theme=0x7f090016;
-        public static final int timingSms=0x7f09005c;
-        public static final int transmit=0x7f090071;
+        public static final int timingSms=0x7f09005e;
+        public static final int transmit=0x7f090073;
         public static final int trashList=0x7f090008;
-        public static final int txh_version=0x7f09004a;
-        public static final int use=0x7f09004e;
-        public static final int value=0x7f090062;
-        public static final int warn=0x7f090066;
-        public static final int with=0x7f090031;
-        public static final int yes=0x7f090058;
+        public static final int txh_version=0x7f09004c;
+        public static final int use=0x7f090050;
+        public static final int value=0x7f090064;
+        public static final int warn=0x7f090068;
+        public static final int with=0x7f090033;
+        public static final int yes=0x7f09005a;
     }
     public static final class style {
         /** 
@@ -309,5 +348,6 @@ public final class R {
     }
     public static final class xml {
         public static final int setting=0x7f050000;
+        public static final int sms_setting=0x7f050001;
     }
 }

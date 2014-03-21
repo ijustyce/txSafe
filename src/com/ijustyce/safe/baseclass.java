@@ -1,10 +1,19 @@
 package com.ijustyce.safe;
 
+import java.util.Iterator;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.Toast;
+
+import com.txh.Api.md5;
 
 public class baseclass extends Activity {
 
@@ -19,7 +28,12 @@ public class baseclass extends Activity {
 		className = this.getLocalClassName().toString();
 		tx = (txApplication) getApplication();
 		tx.theme(baseclass.this);
-
+		
+		if(className.contains("com.ijustyce.sms")){
+			
+			tx.head = "sms";
+		}
+		
 		String lock = tx.getPreferences("lock", "pass");
 		Log.i("lock", lock);
 		if (!lock.equals("null")&&!tx.pw) {
@@ -54,13 +68,49 @@ public class baseclass extends Activity {
 			overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);
 		}
 	}
+	
+	/**
+	 * get signInfo by packageName
+	 * 
+	 * @param pkName
+	 * @return
+	 */
+	public String[] getSignInfo() {
+
+		PackageManager pm = this.getPackageManager();
+		List<PackageInfo> apps = pm
+				.getInstalledPackages(PackageManager.GET_SIGNATURES);
+		Iterator<PackageInfo> iter = apps.iterator();
+		String pkName = this.getPackageName().toString();
+		while (iter.hasNext()) {
+			PackageInfo packageinfo = iter.next();
+			String packageName = packageinfo.packageName;
+			if (packageName.equals(pkName)) {
+				Signature[] sign = packageinfo.signatures;
+				String result = sign[0].toString().substring(29);
+				result = md5.afterMd5(result);
+				String original = "true";
+				if (!result.equals("8fbea4a20c2c26ccea3e2dbfd7d9a953")) {
+					Toast.makeText(
+							this,
+							getResources().getString(R.string.sign_fail)
+									.toString(), Toast.LENGTH_LONG).show();
+					original = "false";
+				}
+				Log.i("---sign---", result);
+				String[] signInfo = { original, result };
+				return signInfo;
+			}
+		}
+		return null;
+	}
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-			if (!className.equals("MainActivity")) {
+			if (!className.contains("MainActivity")) {
 				startActivity(new Intent(this, MainActivity.class));
 				anim();
 			}
