@@ -13,13 +13,13 @@
     <!-- activity_main -->
 
     <string name="hello_world">更简洁，更独特</string>
-    <string name="applocker">程序锁</string>
-    <string name="health">点滴健康</string>
-    <string name="intercept">骚扰拦截</string>
-    <string name="scan">健康自检</string>
-    <string name="privacy">隐私保护</string>
+    <string name="safeContacts">安全通讯录</string>
+    <string name="safeMessage">安全短信</string>
+    <string name="interceptList">拦截记录</string>
+    <string name="trashList">垃圾箱</string>
+    <string name="interceptSetting">拦截设置</string>
     <string name="feedback">用户反馈</string>
-    <string name="tools">工具箱</string>
+    <string name="about">关于</string>
     <string name="help">使用帮助</string>
 
     <!-- feedback -->

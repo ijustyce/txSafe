@@ -1,5 +1,8 @@
 package com.ijustyce.safe;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -30,17 +33,27 @@ public class MainActivity extends baseclass {
 		int h = 3 * height / 16;
 		int w = 11 * width / 30;
 
-		Button bt9 = (Button) findViewById(R.id.bt9);
-		bt9.setBackgroundResource(R.drawable.exit);
+		Button exit = (Button) findViewById(R.id.exit);
+		exit.setBackgroundResource(R.drawable.exit);
 
-		Button bt10 = (Button) findViewById(R.id.bt10);
-		bt10.setBackgroundResource(R.drawable.setting);
+		Button setting = (Button) findViewById(R.id.setting);
+		setting.setBackgroundResource(R.drawable.setting);
+		
+		Map<String,Integer> map = new HashMap<String,Integer>();
+		map.put("id", R.id.safeContacts);
+		map.put("id", R.id.safeMessage);
+		map.put("id", R.id.interceptList);
+		map.put("id", R.id.trashList);
+		map.put("id", R.id.interceptSetting);
+		map.put("id", R.id.help);
+		map.put("id", R.id.feedBack);
+		map.put("id", R.id.about);
 
-		int j = R.id.bt1;
 
-		for (int i = j; i < j + 8; i++) {
+		for (Map.Entry<String, Integer> entry : map.entrySet()) {
 
-			Button bt = (Button) findViewById(i);
+			int id = entry.getValue().intValue();
+			Button bt = (Button) findViewById(id);
 
 			if (themeString.equals("beauty")) {
 
@@ -56,47 +69,47 @@ public class MainActivity extends baseclass {
 
 		switch (v.getId()) {
 
-		case R.id.bt10:
+		case R.id.setting:
 			startActivity(new Intent(this, settings.class));
 			anim();
 			this.finish();
 			break;
 
-		case R.id.bt9:
+		case R.id.exit:
 			exit();
 			break;
 
-		case R.id.bt8:
-			help();
+		case R.id.about:
+			about();
 			break;
 
-		case R.id.bt7:
+		case R.id.feedBack:
 			startActivity(new Intent(this, feedback.class));
 			anim();
 			this.finish();
 			break;
 
-		case R.id.bt6:
-			tools();
+		case R.id.help:
+			help();
 			break;
 
-		case R.id.bt5:
+		case R.id.interceptSetting:
 			privacy();
 			break;
 
-		case R.id.bt4:
+		case R.id.trashList:
 			scan();
 			break;
 
-		case R.id.bt3:
+		case R.id.interceptList:
 			intercept();
 			break;
 
-		case R.id.bt2:
+		case R.id.safeMessage:
 			health();
 			break;
 
-		case R.id.bt1:
+		case R.id.safeContacts:
 			locker();
 			break;
 
@@ -107,9 +120,9 @@ public class MainActivity extends baseclass {
 
 	}
 
-	private void tools() {
+	private void about() {
 
-		startActivity(new Intent(this, Tools.class));
+	//	startActivity(new Intent(this, Tools.class));
 		anim();
 		this.finish();
 	}

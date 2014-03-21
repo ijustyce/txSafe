@@ -13,14 +13,14 @@
     <!-- activity_main -->
 
     <string name="hello_world">More concise, more unique</string>
-    <string name="applocker">App Locker</string>
-    <string name="health">Little\nHealth</string>
-    <string name="intercept">Intercept</string>
-    <string name="scan">Scan</string>
-    <string name="privacy">Privacy</string>
+    <string name="safeContacts">Safe\nContacts</string>
+    <string name="safeMessage">Safe\nSMS</string>
+    <string name="interceptList">Intercept\List</string>
+    <string name="trashList">Trash\nList</string>
+    <string name="interceptSetting">Intercept\Settings</string>
     <string name="feedback">Feedback</string>
-    <string name="tools">Tools</string>
-    <string name="help">help</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
 
     <!-- feedback -->
     <string name="contact">contact</string>
