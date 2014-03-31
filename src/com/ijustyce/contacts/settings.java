@@ -1,7 +1,7 @@
 /**
  * date:013-06-02
  * settings */
-package com.ijustyce.safe;
+package com.ijustyce.contacts;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -20,9 +20,10 @@ public class settings extends PreferenceActivity implements
 		OnPreferenceChangeListener {
 	/** Called when the activity is first created. */
 	private txApplication tx;
-	boolean changed = false;
+	
 	boolean finish = false;  //   is password set finish  
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -39,7 +40,7 @@ public class settings extends PreferenceActivity implements
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-
+		
 			startActivity(new Intent(this, MainActivity.class));
 			anim();
 			this.finish();
@@ -73,7 +74,6 @@ public class settings extends PreferenceActivity implements
 
 	@Override
 	public boolean onPreferenceChange(Preference preference, Object newValue) {
-		// TODO Auto-generated method stub
 
 		if (preference.getKey().equals("lock")) {
 

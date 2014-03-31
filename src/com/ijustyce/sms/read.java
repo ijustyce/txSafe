@@ -38,7 +38,6 @@ public class read extends baseclass{
 		setmessage();
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void setmessage(){
 		int i ,j,count =1;
 		DisplayMetrics dm = new DisplayMetrics(); 

@@ -474,7 +474,6 @@ public class sendsms extends baseclass {
 		setRecent();
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void setRecent(){
 		
 		String[] column = {"phone"};

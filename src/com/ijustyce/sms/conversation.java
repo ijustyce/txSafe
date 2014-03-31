@@ -38,7 +38,6 @@ public class conversation extends baseclass{
 		setmessage();
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void setmessage(){
 		int i,j;
 		String phone ="",content="";

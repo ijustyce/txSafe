@@ -135,7 +135,6 @@ public class dealmsg extends Service {
 		api.insertData(dbFile, "sms", value, column);
 	}
 
-	@SuppressWarnings("deprecation")
 	public void remind(String name, String msg) {
 		SharedPreferences sharedPreferences = getSharedPreferences("read",
 				Context.MODE_PRIVATE);

@@ -34,7 +34,6 @@ public class show extends Activity{
 		quickShow();
 	}
 
-	@SuppressWarnings("deprecation")
 	private void setWidth(){
 		EditText et = (EditText)findViewById(R.id.newmessage);
 		DisplayMetrics dm = new DisplayMetrics(); 

@@ -1,4 +1,6 @@
-package com.ijustyce.safe;
+package com.ijustyce.contacts;
+
+import com.txh.Api.md5;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,10 +10,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.txh.Api.md5;
 
 public class Password extends Activity {
 
@@ -38,22 +37,12 @@ public class Password extends Activity {
 				password = tx.getPreferences("password", "pass");
 			} else if (lock.equals("gesture")) {
 				setContentView(R.layout.lock_screen_layout);
-				setHead();
 				password = tx.getPreferences("gesture", "pass");
 				if (password.equals("null")) {
 					info = (TextView) findViewById(R.id.lock_user_info);
 					init();
 				}
 			}
-		}
-	}
-	
-	private void setHead(){
-		
-		if(tx.head.equals("sms")){
-			ImageView image = (ImageView)findViewById(R.id.lock_title_user_photo);
-			image.setBackgroundDrawable(getResources().
-					getDrawable(R.drawable.sms_ic_launcher));
 		}
 	}
 

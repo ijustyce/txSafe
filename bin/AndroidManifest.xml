@@ -49,17 +49,7 @@
         <service android:name=".txServices" />
 
         <!-- 短信部分 -->
-        <activity
-            android:name="com.ijustyce.sms.MainActivity"
-            android:icon="@drawable/sms_ic_launcher"
-            android:label="@string/sms_name"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.ijustyce.sms.MainActivity" />
         <activity android:name="com.ijustyce.sms.about" />
         <activity
             android:name="com.ijustyce.sms.show"
@@ -117,7 +107,27 @@
             </intent-filter>
         </receiver>
         <!-- 短信部分结束 -->
+        
+        <!-- 拦截部分 -->
+        
+        <activity android:name="com.ijustyce.intercept.MainActivity" />
+         <receiver
+            android:name="com.ijustyce.intercept.recevicer"
+            android:enabled="true" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.ijustyce.intercept.service"/>
 
+        <activity android:name="com.ijustyce.intercept.setting"/>
+        <activity android:name="com.ijustyce.intercept.black"/>
+        <activity android:name="com.ijustyce.intercept.white"/>
+        <activity android:name="com.ijustyce.intercept.help"/>
+        <activity android:name="com.ijustyce.intercept.advance"/>
+        <activity android:name="com.ijustyce.intercept.history"/>
+        <activity android:name="com.ijustyce.intercept.feedback" />
+        <!-- 拦截部分结束 -->
     </application>
 
 </manifest>

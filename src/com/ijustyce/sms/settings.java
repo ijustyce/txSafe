@@ -23,7 +23,6 @@ public class settings extends PreferenceActivity implements
 	/** Called when the activity is first created. */
 	private txApplication tx;
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 

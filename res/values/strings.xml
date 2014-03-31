@@ -72,10 +72,10 @@
     <string name="pass_affirm">affirm your gesture</string>
     <string name="pass_affirm_error">inconformity</string>
     <string name="pass_short">password to short</string>
-    
+
     <!-- 天蝎短信部分 -->
-     <string name="sms_name">tx-sms</string>
-     <string name="send_show">send Successfully</string>
+    <string name="sms_name">tx-sms</string>
+    <string name="send_show">send Successfully</string>
     <string name="send_error">input error</string>
     <string name="with">message with </string>
     <string name="main_show">click to reply</string>
@@ -163,6 +163,44 @@
     <string name="desc_timingSms">OK</string>
 
     <!-- 天蝎短信部分结束 -->
+
+
+    <!-- 拦截部分 -->
+    <string name="phone">phone</string>
+    <string name="add_black">Add to\n black list</string>
+    <string name="add_white">Add to\n white list</string>
+    <string name="black">Black List</string>
+    <string name="white">White List</string>
+    <string name="point">Point</string>
+    <string name="advance">Advance</string>
+    <string name="history_list">history list click to delete!</string>
+    <string name="history">History</string>
+    <string name="success_add">add success</string>
+    <string name="error_allow">exist in white list,please delete first!</string>
+    <string name="error_black">exist in black list,please delete first!</string>
+    <string name="error_exist">already exist !</string>
+    <string name="sms_show">Please call me later[NO-REPLY]</string>
+    <string name="notifi">intercept friend\s call</string>
+    <string name="action_clean">clean</string>
+    <string name="allow_show">always allowed number list</string>
+
+    <!-- 拦截部分结束 -->
+
+
+    <!-- 联系人部分 -->
+    <string name="favorite">Favorite</string>
+    <string name="secret">Secret</string>
+    <string name="MinXian">MinXian</string>
+    <string name="HangZhou">HangZhou</string>
+    <string name="other">Other</string>
+    <string name="relative">Relative</string>
+
+    <!-- list -->
+    <string name="AddPrson">Add To List</string>
+    <string name="name">name:</string>
+    <!-- list列表弹出菜单 -->
+    <string name="sms">message</string>
+    <string name="edit">edit</string>
 
     <!-- 以下是自定义的颜色 -->
 

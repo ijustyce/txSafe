@@ -1,86 +1,48 @@
-/**
- * date:2013-06-02
- */
+package com.ijustyce.intercept;
 
-package com.ijustyce.sms;
-
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ijustyce.safe.R;
-import com.ijustyce.safe.baseclass;
 import com.txh.Api.sqlite;
 
-public class intercept extends baseclass{
+public class black extends Activity{
 	String next = "",dbFile;
 	int total;
 	sqlite api;
-	String table;
 
-	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.sms_show_intercept);
-		
+		setContentView(R.layout.show_intercept);
 		api = new sqlite();
 		dbFile = Constants.dbFile;
-		
-		settext("words");
-		
-		TextView words = new TextView(this);
-		words.setText(getResources().getString(R.string.intercept_words).toString());
-		words.setTextSize(21);
-		words.setGravity(Gravity.CENTER);
-		
-		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.intercept);
-		linearLayout.addView(words, 0);
-
-		TextView textview = new TextView(this);
-		textview.setHeight(8);
-		linearLayout.addView(textview, 0);
-		
-		settext("intercept");
-		
-		TextView phone = new TextView(this);
-		phone.setText(getResources().getString(R.string.intercept_phone).toString());
-		phone.setTextSize(21);
-		phone.setGravity(Gravity.CENTER);
-		
-		linearLayout.addView(phone, 0);
-
-		textview = new TextView(this);
-		textview.setHeight(8);
-		linearLayout.addView(textview, 0);
+		settext();
 	}
 	
 	
-	private void settext(String t){	
+	private void settext(){	
 		int i,j;
-		table = t;
-		String[]column={"value"};
-		String [][]value = api.getData(dbFile, table, 
-				"select * from "+table, null, column);
+		String[]column={"phone"};
+		String [][]value = api.getData(dbFile, "intercept", 
+				"select * from intercept", null, column);
 		for(i = 0;i<value.length;i++){
 			for(j=0;j<value[i].length;j++){
-				ShowIntercept(value[i][j],t);
+				ShowIntercept(value[i][j]);
 			}
 		}
 	}
 
-	private void ShowIntercept(String phone,final String t){
-		
-		String theme = tx.theme(intercept.this);
-
+	private void ShowIntercept(String phone){
 		WindowManager wm = getWindowManager();
 		int width = wm.getDefaultDisplay().getWidth();
 
@@ -91,21 +53,15 @@ public class intercept extends baseclass{
 		bt.setText(phone);
 		bt.setContentDescription(phone);
 		bt.setLayoutParams(new LinearLayout.LayoutParams(7 * width / 8,
-														 LayoutParams.WRAP_CONTENT));
+														 LinearLayout.LayoutParams.WRAP_CONTENT));
 		final String temp = phone;
 		bt.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0){
 					next = temp;
-					table = t;
 					ict();
 				}
 
 		});
-		
-		if(theme.equals("beauty")){
-		    bt.setAlpha((float)0.4);
-			bt.setBackgroundResource(R.drawable.newmessage);
-		}
 		final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.intercept);
 		linearLayout.addView(bt, 0);
 
@@ -131,13 +87,19 @@ public class intercept extends baseclass{
 	}
 
 	private void del(){
-	
 		String [] args = {next};
-		api.delete(dbFile, table, "value=?", args);
+		api.delete(dbFile, "intercept", "phone=?", args);
 
-		Intent intent = new Intent(this, intercept.class);
+		Intent intent = new Intent(this, black.class);
 		startActivity(intent);
-		anim();
 		this.finish();
+	}
+	
+	public boolean onKeyDown(int keyCode, KeyEvent event){
+		if (keyCode == KeyEvent.KEYCODE_BACK){
+			startActivity(new Intent(this, MainActivity.class));
+			this.finish();
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }

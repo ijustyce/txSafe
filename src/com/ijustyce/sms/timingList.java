@@ -52,7 +52,6 @@ public class timingList extends baseclass{
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	private void ShowIntercept(String phone,String id){
 		
 		String theme = tx.theme(timingList.this);

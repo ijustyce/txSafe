@@ -130,7 +130,7 @@ public class MainActivity extends baseclass {
 			break;
 
 		case R.id.interceptSetting:
-			privacy();
+			intercept();
 			break;
 
 		case R.id.trashList:
@@ -138,7 +138,7 @@ public class MainActivity extends baseclass {
 			break;
 
 		case R.id.interceptList:
-			intercept();
+			interceptList();
 			break;
 
 		case R.id.safeMessage:
@@ -152,8 +152,11 @@ public class MainActivity extends baseclass {
 		}
 	}
 
-	private void privacy() {
+	private void interceptList() {
 
+		startActivity(new Intent(this, com.ijustyce.intercept.history.class));
+		anim();
+		this.finish();
 	}
 
 	private void about() {
@@ -169,7 +172,9 @@ public class MainActivity extends baseclass {
 
 	private void intercept() {
 		
-		
+		startActivity(new Intent(this, com.ijustyce.intercept.MainActivity.class));
+		anim();
+		this.finish();
 	}
 
 	private void sms() {

@@ -1,15 +1,11 @@
-package com.ijustyce.safe;
+package com.ijustyce.contacts;
 
 import java.io.File;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 import android.app.Application;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -22,20 +18,19 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.txh.Api.sqlite;
+
 public class txApplication extends Application {
 
 	private static String tag = "txTag";
+	private String dbFile; 
 	public String sharedName = "shared";
 	public boolean pw = false;
-	public String head = "";
-	private boolean chat = false;
-	public boolean runing = false;
 	public String table;
-	private String incomingNumber;
 	@Override
 	public void onCreate() {
 		
-		getDbFile();
+		firstUse();
 		Log.i(tag, "Application onCreate , pid = " + Process.myPid());
 	}
 	
@@ -115,18 +110,39 @@ public class txApplication extends Application {
 	}
 	
 	/**
+	 * check if is first time , return true if is first time
+	 * @return
+	 */
+	public boolean firstUse(){
+		
+		File dbFile = new File(getDbFile());
+		if(!dbFile.exists()){
+			createTable();
+			Log.i(tag, "this is first time to use");
+			return true;
+		}
+		
+		Log.i(tag, "this is not the first time to use");
+		return false;
+	}
+	
+	/**
 	 * return sqlite file path ,if parent directory not exist
 	 * it will create !
 	 * @return
 	 */
-	public void getDbFile(){
+	public String getDbFile(){
 	
 		String file = this.getFilesDir().getPath();
 		File f = new File(file);
 		if(!f.exists()){
 			f.mkdir();
 		}
+		dbFile = file + "/contacts.db";
+		Log.i(tag, dbFile);
+		return dbFile;
 	}
+	
 	
 	/**
 	 * return windows animation string
@@ -215,16 +231,6 @@ public class txApplication extends Application {
 	}
 	
 	/**
-	 * return date , format like yyyy/MM/dd/HH/mm
-	 * @return
-	 */
-	public String getDate(){
-		 SimpleDateFormat ft = new SimpleDateFormat("yyyy/MM/dd/HH/mm",Locale.CHINA);
-		 Date dd = new Date();
-		 return ft.format(dd);
-	}
-	
-	/**
 	 * return date by your own formatter , like yyyy/MM/dd/HH/mm
 	 * @return
 	 */
@@ -235,77 +241,6 @@ public class txApplication extends Application {
 		 return ft.format(dd);
 	}
 	
-	/**
-	 * return time1-time2 as a millisecond value
-	 * @param time1
-	 * @param time2
-	 * @return
-	 */	
-	public long getQuot(String time1, String time2){
-		 long quot = 0;
-		 SimpleDateFormat ft = new SimpleDateFormat("yyyy/MM/dd/HH/mm",Locale.CHINA);
-		 try {
-			 Date date1 = ft.parse(time1);
-			 Date date2 = ft.parse(time2);
-			 quot = date1.getTime() - date2.getTime();
-		  } catch (ParseException e) {
-		   e.printStackTrace();
-		  }
-		  return quot;
-	}
-	
-	/**
-	 * return call state
-	 * @return
-	 */
-	public boolean getCallState(){
-		return chat;
-	}
-	
-	/**
-	 * set call state
-	 * @return
-	 */
-	public void setCallState(boolean state){
-		chat = state;
-	}
-	
-	/**
-	 * show notification
-	 * @param tickerText
-	 * @param contentTitle
-	 * @param contentText
-	 * @param intent
-	 */
-	public void notifi(int icon , String tickerText , String contentTitle ,
-			String contentText , PendingIntent intent) {
-		
-		NotificationManager mNotificationManager = (NotificationManager)
-				this.getSystemService(Context.NOTIFICATION_SERVICE);
-		long when = System.currentTimeMillis();
-		Notification notification = new Notification(icon, tickerText, when);
-		notification.flags |= Notification.FLAG_AUTO_CANCEL;
-		Context context = getApplicationContext();
-        notification.setLatestEventInfo(context, contentTitle, contentText , intent); 
-        mNotificationManager.notify(0, notification);
-	}
-	
-	/**
-	 * setting the number to intercept
-	 * @param num
-	 */
-	
-	public void setPhone(String num){
-		incomingNumber = num;
-	}
-	
-	/**
-	 * return the number to intercept
-	 * @return
-	 */
-	public String getPhone(){
-		return incomingNumber;
-	}
 	
 	/**
 	 * @return phone number if success or return null 
@@ -354,6 +289,7 @@ public class txApplication extends Application {
 	 * set text to clipboard 
 	 * @param text the text set to clipboard 
 	 */
+	@SuppressWarnings("deprecation")
 	public void setClipboard(String text){
 		
 		ClipboardManager clipboard = (ClipboardManager)getSystemService
@@ -367,11 +303,32 @@ public class txApplication extends Application {
 	 * get clipboard text
 	 * @return clipboard text
 	 */
+	@SuppressWarnings("deprecation")
 	public String getClipboard(){
 		
 		ClipboardManager clipboard = (ClipboardManager)getSystemService
 				(Context.CLIPBOARD_SERVICE);
 		
 		return clipboard.getText().toString();
+	}
+	
+	/**
+	 * create table for app
+	 */
+	
+	private void createTable() {
+
+		sqlite api = new sqlite();
+		String dbFile = getDbFile();
+
+		String[] table = { "name", "phone" };
+
+		api.createTable("favorite", table, dbFile);
+		api.createTable("secret", table, dbFile);
+		api.createTable("MinXian", table, dbFile);
+		api.createTable("HangZhou", table, dbFile);
+		api.createTable("relative", table, dbFile);
+		api.createTable("other", table, dbFile);
+		api.createTable("contacts", table, dbFile);
 	}
 }

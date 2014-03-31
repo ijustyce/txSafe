@@ -72,7 +72,7 @@
     <string name="pass_affirm">请确认您的手势</string>
     <string name="pass_affirm_error">两次手势不一致，请重新绘制</string>
     <string name="pass_short">密码太短，请重新输入</string>
-    
+
     <!-- 短信部分 -->
     <string name="sms_name">天蝎短信</string>
     <string name="send_show">短信已成功发送</string>
@@ -143,7 +143,25 @@
     <string name="transmit">转发</string>
     <string name="none_sms">会话列表为空</string>
     <string name="intecept_num">拦截该号码</string>
-    
+
     <!-- 短信部分结束 -->
+
+
+    <!-- 拦截部分 -->
+    <string name="phone">电话号码</string>
+    <string name="add_black">添加到黑名单</string>
+    <string name="add_white">添加到白名单</string>
+    <string name="black">黑名单</string>
+    <string name="white">白名单</string>
+    <string name="point">获取积分</string>
+    <string name="advance">高级</string>
+    <string name="history">拦击历史</string>
+    <string name="success_add">添加成功</string>
+    <string name="error_allow">已在白名单中，请先删除！</string>
+    <string name="error_black">已在黑名单中，请先删除！</string>
+    <string name="error_exist">已经存在 !</string>
+    <string name="sms_show">请稍后联系，谢谢。</string>
+    <string name="notifi">拦截了好友的来电。</string>
+    <!-- 拦截部分结束 -->
 
 </resources>

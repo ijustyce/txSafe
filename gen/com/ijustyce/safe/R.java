@@ -54,131 +54,153 @@ public final class R {
         public static final int beauty=0x7f020000;
         public static final int bj=0x7f020001;
         public static final int bjt=0x7f020002;
-        /**  天蝎短信部分结束 
- 以下是自定义的颜色 
+        /**  以下是自定义的颜色 
          */
-        public static final int bkcolor=0x7f020009;
+        public static final int bkcolor=0x7f02000a;
         public static final int exit=0x7f020003;
         public static final int ic_launcher=0x7f020004;
-        public static final int newmessage=0x7f02000a;
-        public static final int read=0x7f020005;
-        public static final int setting=0x7f020006;
-        public static final int sms_ic_launcher=0x7f020007;
-        public static final int txh=0x7f020008;
+        public static final int intercept=0x7f020005;
+        public static final int newmessage=0x7f02000b;
+        public static final int read=0x7f020006;
+        public static final int setting=0x7f020007;
+        public static final int sms_ic_launcher=0x7f020008;
+        public static final int txh=0x7f020009;
     }
     public static final class id {
-        public static final int BackupBt=0x7f0c002f;
-        public static final int RestoreBt=0x7f0c0030;
-        public static final int Timing=0x7f0c0041;
+        public static final int BackupBt=0x7f0c0036;
+        public static final int RestoreBt=0x7f0c0037;
+        public static final int Timing=0x7f0c0048;
         public static final int about=0x7f0c0009;
-        public static final int action_settings=0x7f0c0046;
-        public static final int appList=0x7f0c002c;
-        public static final int bottom_info_layout=0x7f0c0028;
-        public static final int bt1=0x7f0c000f;
-        public static final int bt10=0x7f0c000e;
-        public static final int bt2=0x7f0c0010;
-        public static final int bt3=0x7f0c0011;
-        public static final int bt4=0x7f0c0012;
-        public static final int bt5=0x7f0c0013;
-        public static final int bt6=0x7f0c0014;
-        public static final int bt7=0x7f0c0015;
-        public static final int bt8=0x7f0c0016;
-        public static final int bt9=0x7f0c0017;
-        public static final int btn_lock_nopin=0x7f0c0029;
-        public static final int checkSignBt=0x7f0c0031;
-        public static final int contact=0x7f0c000c;
-        public static final int content=0x7f0c003c;
-        public static final int del=0x7f0c001c;
+        public static final int action_clean=0x7f0c004c;
+        public static final int addBt=0x7f0c000c;
+        public static final int appList=0x7f0c000d;
+        public static final int bottom_info_layout=0x7f0c002f;
+        public static final int bt1=0x7f0c000e;
+        public static final int bt10=0x7f0c0017;
+        public static final int bt2=0x7f0c000f;
+        public static final int bt3=0x7f0c0010;
+        public static final int bt4=0x7f0c0011;
+        public static final int bt5=0x7f0c0012;
+        public static final int bt6=0x7f0c0013;
+        public static final int bt7=0x7f0c0014;
+        public static final int bt8=0x7f0c0015;
+        public static final int bt9=0x7f0c0016;
+        public static final int btn_lock_nopin=0x7f0c0030;
+        public static final int checkSignBt=0x7f0c0038;
+        public static final int contact=0x7f0c0018;
+        public static final int content=0x7f0c0043;
+        public static final int del=0x7f0c0023;
         public static final int exit=0x7f0c000a;
         public static final int feedBack=0x7f0c0008;
-        public static final int finish=0x7f0c003e;
+        public static final int finish=0x7f0c0045;
         public static final int help=0x7f0c0007;
-        public static final int intercept=0x7f0c0045;
+        public static final int info=0x7f0c0033;
+        public static final int intercept=0x7f0c0034;
         public static final int interceptList=0x7f0c0004;
         public static final int interceptSetting=0x7f0c0006;
-        public static final int layout=0x7f0c0032;
-        public static final int left=0x7f0c003d;
-        public static final int left_1=0x7f0c0040;
-        public static final int lockBt=0x7f0c002b;
-        public static final int lock_paint=0x7f0c002a;
-        public static final int lock_paint_layout=0x7f0c0027;
-        public static final int lock_title_user_photo=0x7f0c0025;
-        public static final int lock_user_info=0x7f0c0026;
-        public static final int message=0x7f0c0044;
-        public static final int msg=0x7f0c000d;
-        public static final int name=0x7f0c003a;
-        public static final int newmessage=0x7f0c0035;
-        public static final int newnote=0x7f0c0043;
-        public static final int num0=0x7f0c0024;
-        public static final int num1=0x7f0c0019;
-        public static final int num2=0x7f0c001a;
-        public static final int num3=0x7f0c001b;
-        public static final int num4=0x7f0c001d;
-        public static final int num5=0x7f0c001e;
-        public static final int num6=0x7f0c001f;
-        public static final int num7=0x7f0c0021;
-        public static final int num8=0x7f0c0022;
-        public static final int num9=0x7f0c0023;
-        public static final int ok=0x7f0c0020;
-        public static final int pw=0x7f0c0018;
-        public static final int quickclose=0x7f0c0037;
-        public static final int quickreply=0x7f0c0036;
-        public static final int recent_text=0x7f0c0038;
+        public static final int layout=0x7f0c0039;
+        public static final int left=0x7f0c0044;
+        public static final int left_1=0x7f0c0047;
+        public static final int lockBt=0x7f0c0032;
+        public static final int lock_paint=0x7f0c0031;
+        public static final int lock_paint_layout=0x7f0c002e;
+        public static final int lock_title_user_photo=0x7f0c002c;
+        public static final int lock_user_info=0x7f0c002d;
+        public static final int message=0x7f0c004b;
+        public static final int miniAdLinearLayout=0x7f0c001d;
+        public static final int msg=0x7f0c0019;
+        public static final int name=0x7f0c0041;
+        public static final int newmessage=0x7f0c003c;
+        public static final int newnote=0x7f0c004a;
+        public static final int num0=0x7f0c002b;
+        public static final int num1=0x7f0c0020;
+        public static final int num2=0x7f0c0021;
+        public static final int num3=0x7f0c0022;
+        public static final int num4=0x7f0c0024;
+        public static final int num5=0x7f0c0025;
+        public static final int num6=0x7f0c0026;
+        public static final int num7=0x7f0c0028;
+        public static final int num8=0x7f0c0029;
+        public static final int num9=0x7f0c002a;
+        public static final int ok=0x7f0c0027;
+        public static final int phone=0x7f0c001b;
+        public static final int pw=0x7f0c001f;
+        public static final int quickclose=0x7f0c003e;
+        public static final int quickreply=0x7f0c003d;
+        public static final int recent_text=0x7f0c003f;
+        public static final int relative=0x7f0c001c;
         public static final int safeContacts=0x7f0c0002;
         public static final int safeMessage=0x7f0c0003;
-        public static final int scrollView=0x7f0c0039;
-        public static final int select=0x7f0c003b;
-        public static final int send=0x7f0c003f;
+        public static final int scrollView=0x7f0c0040;
+        public static final int select=0x7f0c0042;
+        public static final int send=0x7f0c0046;
         public static final int setting=0x7f0c000b;
-        public static final int show=0x7f0c0033;
-        public static final int showcontent=0x7f0c0034;
-        public static final int text=0x7f0c002d;
+        public static final int show=0x7f0c003a;
+        public static final int showcontent=0x7f0c003b;
+        public static final int text=0x7f0c001a;
         public static final int textView=0x7f0c0001;
-        public static final int timingSms=0x7f0c0042;
+        public static final int textview=0x7f0c001e;
+        public static final int timingSms=0x7f0c0049;
         public static final int trashList=0x7f0c0005;
-        public static final int value=0x7f0c002e;
+        public static final int value=0x7f0c0035;
         public static final int version=0x7f0c0000;
     }
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int feedback=0x7f030002;
-        public static final int health=0x7f030003;
-        public static final int help=0x7f030004;
-        public static final int lock=0x7f030005;
-        public static final int lock_screen_layout=0x7f030006;
-        public static final int locker=0x7f030007;
-        public static final int preference=0x7f030008;
-        public static final int sms_advance=0x7f030009;
-        public static final int sms_backup=0x7f03000a;
-        public static final int sms_main=0x7f03000b;
-        public static final int sms_quickshow=0x7f03000c;
-        public static final int sms_send=0x7f03000d;
-        public static final int sms_show=0x7f03000e;
-        public static final int sms_show_intercept=0x7f03000f;
+        public static final int contacts_list=0x7f030002;
+        public static final int contacts_main=0x7f030003;
+        public static final int feedback=0x7f030004;
+        public static final int health=0x7f030005;
+        public static final int help=0x7f030006;
+        public static final int intercept_advance=0x7f030007;
+        public static final int intercept_main=0x7f030008;
+        public static final int lock=0x7f030009;
+        public static final int lock_screen_layout=0x7f03000a;
+        public static final int locker=0x7f03000b;
+        public static final int preference=0x7f03000c;
+        public static final int show_intercept=0x7f03000d;
+        public static final int sms_advance=0x7f03000e;
+        public static final int sms_backup=0x7f03000f;
+        public static final int sms_main=0x7f030010;
+        public static final int sms_quickshow=0x7f030011;
+        public static final int sms_send=0x7f030012;
+        public static final int sms_show=0x7f030013;
+        public static final int sms_show_intercept=0x7f030014;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
     }
     public static final class string {
+        /**  list 
+         */
+        public static final int AddPrson=0x7f090099;
         public static final int Conversation=0x7f090054;
         public static final int Dustbin=0x7f090056;
+        public static final int HangZhou=0x7f090096;
         public static final int Inbox=0x7f090055;
+        public static final int MinXian=0x7f090095;
         public static final int SMStimer=0x7f09005d;
         public static final int Timing_error=0x7f09005f;
         public static final int about=0x7f09000b;
         public static final int about_txh=0x7f09004d;
+        public static final int action_clean=0x7f090091;
         public static final int action_settings=0x7f090001;
         public static final int add=0x7f09003c;
+        public static final int add_black=0x7f090083;
         public static final int add_contacts=0x7f090070;
         public static final int add_error=0x7f090041;
         public static final int add_number=0x7f090065;
+        public static final int add_white=0x7f090084;
         public static final int add_words=0x7f090066;
+        public static final int advance=0x7f090088;
+        public static final int allow_show=0x7f090092;
         public static final int anim=0x7f090015;
         public static final int app_name=0x7f090000;
         public static final int ask=0x7f090058;
         public static final int ask_content=0x7f09003a;
         public static final int backup=0x7f090067;
+        public static final int black=0x7f090085;
         public static final int call=0x7f090071;
         public static final int cancel=0x7f09004f;
         public static final int checkSign=0x7f09006b;
@@ -217,10 +239,18 @@ public final class R {
         public static final int desc_timingSms=0x7f090081;
         public static final int dialog_content=0x7f090011;
         public static final int dialog_title=0x7f090010;
+        public static final int edit=0x7f09009c;
         public static final int enter_send=0x7f09004e;
+        public static final int error_allow=0x7f09008c;
+        public static final int error_black=0x7f09008d;
+        public static final int error_exist=0x7f09008e;
         public static final int error_feedback=0x7f090012;
         public static final int error_timing=0x7f090061;
         public static final int exit=0x7f090059;
+        /**  拦截部分结束 
+ 联系人部分 
+         */
+        public static final int favorite=0x7f090093;
         public static final int feedback=0x7f09000a;
         public static final int finish=0x7f090044;
         public static final int health_family=0x7f09001f;
@@ -248,6 +278,8 @@ public final class R {
  password 
          */
         public static final int hint=0x7f090023;
+        public static final int history=0x7f09008a;
+        public static final int history_list=0x7f090089;
         public static final int intecept_num=0x7f090075;
         public static final int intercept=0x7f09003d;
         public static final int interceptList=0x7f090007;
@@ -266,18 +298,28 @@ public final class R {
         public static final int me=0x7f090037;
         public static final int more=0x7f090057;
         public static final int msg=0x7f09000e;
+        public static final int name=0x7f09009a;
         public static final int newMsg=0x7f090053;
         public static final int newmessage=0x7f090038;
         public static final int no=0x7f09005b;
         public static final int none_sms=0x7f090074;
+        public static final int notifi=0x7f090090;
         public static final int ok=0x7f090024;
         public static final int option=0x7f09006f;
+        public static final int other=0x7f090097;
         public static final int pass_affirm=0x7f09002d;
         public static final int pass_affirm_error=0x7f09002e;
         public static final int pass_first=0x7f09002c;
         public static final int pass_hint=0x7f09002a;
         public static final int pass_info=0x7f09002b;
         public static final int pass_short=0x7f09002f;
+        /**  天蝎短信部分结束 
+ 拦截部分 
+ 短信部分结束 
+ 拦截部分 
+         */
+        public static final int phone=0x7f090082;
+        public static final int point=0x7f090087;
         public static final int pw_error=0x7f090027;
         public static final int pw_set=0x7f090029;
         public static final int pw_success=0x7f090026;
@@ -286,10 +328,12 @@ public final class R {
         public static final int quickhint=0x7f090039;
         public static final int receive_success=0x7f090047;
         public static final int recent=0x7f09005c;
+        public static final int relative=0x7f090098;
         public static final int reply=0x7f090036;
         public static final int restore=0x7f090069;
         public static final int safeContacts=0x7f090005;
         public static final int safeMessage=0x7f090006;
+        public static final int secret=0x7f090094;
         public static final int select=0x7f09004b;
         public static final int send=0x7f090043;
         public static final int send_again=0x7f090051;
@@ -306,12 +350,17 @@ public final class R {
          */
         public static final int sign_fail=0x7f090003;
         public static final int sign_success=0x7f09006a;
+        /**  list列表弹出菜单 
+         */
+        public static final int sms=0x7f09009b;
         /**  天蝎短信部分 
  短信部分 
          */
         public static final int sms_name=0x7f090030;
+        public static final int sms_show=0x7f09008f;
         public static final int strangers=0x7f090062;
         public static final int submit=0x7f09000f;
+        public static final int success_add=0x7f09008b;
         /**  settings 
  settings 
          */
@@ -324,6 +373,7 @@ public final class R {
         public static final int use=0x7f090050;
         public static final int value=0x7f090064;
         public static final int warn=0x7f090068;
+        public static final int white=0x7f090086;
         public static final int with=0x7f090033;
         public static final int yes=0x7f09005a;
     }
