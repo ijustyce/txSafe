@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.ijustyce.safe.R;
+import com.ijustyce.safe.baseclass;
 import com.txh.Api.libs;
 
 public class feedback extends baseclass{

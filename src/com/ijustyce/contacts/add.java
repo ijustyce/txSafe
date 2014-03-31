@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.ijustyce.safe.R;
 import com.txh.Api.sqlite;
 
 public class add extends list {

@@ -1,6 +1,9 @@
 
 package com.ijustyce.contacts;
 
+import com.ijustyce.safe.R;
+import com.ijustyce.safe.baseclass;
+
 import android.os.Bundle;
 import android.widget.TextView;
 
